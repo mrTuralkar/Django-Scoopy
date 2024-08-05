@@ -19,8 +19,19 @@ from django.urls import path,include
 from Scoopyapp import views
 
 
+# function based url pattern
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('about/', views.about),
     path('', include('Scoopyapp.urls')),
+
 ]
+
+
+
+# # class based url pattern
+# urlpatterns = [
+#     path('admin/', admin.site.urls),
+#     path('', include('Scoopyapp.urls')),
+# ]
+
