@@ -1,1 +1,1 @@
-# Django-Scoopy
+# Django-Scoopy# Django
