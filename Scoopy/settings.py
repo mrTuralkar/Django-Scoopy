@@ -32,13 +32,13 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
-    'Scoopyapp'
+    'django.contrib.admin',        # Django's admin interface
+    'django.contrib.auth',         # Django's authentication system
+    'django.contrib.contenttypes', # Django's content types framework
+    'django.contrib.sessions',     # Django's session framework
+    'django.contrib.messages',     # Django's messages framework
+    'django.contrib.staticfiles',  # Django's static files handling
+    'Scoopyapp'                    # Your custom application
 ]
 
 MIDDLEWARE = [
@@ -55,17 +55,15 @@ ROOT_URLCONF = 'Scoopy.urls'
 
 TEMPLATES = [
     {
-        'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [
-            os.path.join(BASE_DIR, 'templates')
-        ],
-        'APP_DIRS': True,
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',  # Specifies the backend to use for rendering templates
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],  # Path to the directory containing the templates
+        'APP_DIRS': True,  # Whether or not to look for templates in each app's 'templates' directory
         'OPTIONS': {
-            'context_processors': [
-                'django.template.context_processors.debug',
-                'django.template.context_processors.request',
-                'django.contrib.auth.context_processors.auth',
-                'django.contrib.messages.context_processors.messages',
+            'context_processors': [  # Context processors that add extra context to the templates
+                'django.template.context_processors.debug',  # Adds debugging information to the context
+                'django.template.context_processors.request',  # Adds request information to the context
+                'django.contrib.auth.context_processors.auth',  # Adds user authentication information to the context
+                'django.contrib.messages.context_processors.messages',  # Adds message information to the context
             ],
         },
     },
@@ -119,19 +117,14 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
-STATIC_URL = 'static/'
-
-
+STATIC_URL = 'static/'  # URL for serving static files
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'  # Default primary key field type for models
 
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # Directory where static files will be collected for production
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'Static'),
+    os.path.join(BASE_DIR, 'Static'),  # Additional directories where Django will look for static files
 ]
-
