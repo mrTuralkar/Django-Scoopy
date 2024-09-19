@@ -26,7 +26,8 @@ SECRET_KEY = 'django-insecure-ja%y5&^(8q81w+g&sj19q-^%k&23j#sbf0495l&b81**ce%h4=
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['jiten08.pythonanywhere.com']
+
 
 
 # Application definition
@@ -55,7 +56,8 @@ ROOT_URLCONF = 'Scoopy.urls'
 
 TEMPLATES = [
     {
-        'BACKEND': 'django.template.backends.django.DjangoTemplates',  # Specifies the backend to use for rendering templates
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',  # Specifies the backend to use for 
+                                                                        # rendering templates
         'DIRS': [os.path.join(BASE_DIR, 'templates')],  # Path to the directory containing the templates
         'APP_DIRS': True,  # Whether or not to look for templates in each app's 'templates' directory
         'OPTIONS': {
@@ -123,7 +125,8 @@ STATIC_URL = 'static/'  # URL for serving static files
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'  # Default primary key field type for models
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # Directory where static files will be collected for production
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # Directory where static files 
+                                                    # will be collected for production
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'Static'),  # Additional directories where Django will look for static files

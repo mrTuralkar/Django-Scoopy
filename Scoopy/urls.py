@@ -19,22 +19,24 @@ from django.urls import path,include
 from Scoopyapp import views
 
 
-
-# class based url pattern
+# function based url pattern
 # urlpatterns = [
 #     path('admin/', admin.site.urls),  # URL pattern for the Django admin interface
+#     path('about/', views.about,name="about"),  # URL pattern for the 'about' page handled by the 'about' view
 #     path('', include('Scoopyapp.urls')),  # Includes URL patterns from the 'Scoopyapp' application
+
 # ]
 
 
 
-# function based url pattern
+# # class based url pattern
 urlpatterns = [
     path('admin/', admin.site.urls),  # URL pattern for the Django admin interface
-    path('about/', views.about),  # URL pattern for the 'about' page handled by the 'about' view
+    path('about/', views.About.as_view(), name="about"),
     path('', include('Scoopyapp.urls')),  # Includes URL patterns from the 'Scoopyapp' application
-
 ]
+
+
 
 
 
